@@ -8,12 +8,12 @@ async function ETcallHome() {
 
     if (SetiSignal.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(SetiSignal.value)
+        console.log(SetiSignal["value"])
         return Ufo.innerHTML = "Ip address error.";
 
     } else {
         console.log(WoWsignal.ip)
-        return Ufo.innerHTML = WoWsignal.ip;
+        return Ufo.innerHTML = WoWsignal["ip"];
     }
 
 }
@@ -27,13 +27,13 @@ async function timeTravel() {
 
     if (foresight.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(foresight.value)
+        console.log(foresight["value"])
         return Interdimensional.innerHTML = "Time data not currently online.";
 
     } else {
         console.log(SpaceWarp)
         //Convert to local time
-        return Interdimensional.innerHTML = SpaceWarp.time + " " + SpaceWarp.date;
+        return Interdimensional.innerHTML = SpaceWarp["time"] + " " + SpaceWarp["date"];
     }
 
 }
@@ -47,12 +47,13 @@ async function roswell() {
 
     if (area51.ok === false) {
         console.log("No UFO just balloon debris!")
-        console.log(area51.value)
+        console.log(area51["value"])
         return Uap.innerHTML = "HTTP error";
 
     } else {
         console.log(flyingSaucer)
-        return Uap.innerHTML = flyingSaucer.Origin;
+        return Uap.innerHTML =
+            flyingSaucer["Origin"] + " " + flyingSaucer["X-Cloud-Trace-Context"] + " " + flyingSaucer["Accept"] + " " + flyingSaucer["traceparent"] + " " + flyingSaucer["User-Agent"];
     }
 
 }
@@ -66,12 +67,12 @@ async function reverseEngineer() {
 
     if (bobLazar.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(bobLazar.value)
+        console.log(bobLazar["value"])
         return element115.innerHTML = "Validation error";
 
     } else {
         console.log(EtTech)
-        return element115.innerHTML = EtTech;
+        return element115.innerHTML = EtTech["size"] + " " + EtTech["parse_time_nanoseconds"] + " " + EtTech["object_or_array"] + " " + EtTech["validate"] + " " + EtTech["empty"];
     }
 
 }
