@@ -1,19 +1,19 @@
 
 
-async function ETcallHome() {
+async function compAddress() {
 
-    const SetiSignal = await fetch("http://ip.jsontest.com/");
-    const WoWsignal = await SetiSignal.json();
-    const Ufo = document.getElementById("IpMan");
+    const ipOutbound = await fetch("http://ip.jsontest.com/");
+    const ipPend = await ipOutbound.json();
+    const userIpDisplay = document.getElementById("IpMan");
 
-    if (SetiSignal.ok === false) {
+    if (ipOutbound.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(SetiSignal["value"])
-        return Ufo.innerHTML = "Ip address error.";
+        console.log(ipOutbound["value"])
+        return userIpDisplay.innerHTML = "Ip address error.";
 
     } else {
-        console.log(WoWsignal.ip)
-        return Ufo.innerHTML = WoWsignal["ip"];
+        console.log(ipPend.ip)
+        return userIpDisplay.innerHTML = ipPend["ip"];
     }
 
 }
