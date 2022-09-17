@@ -51,10 +51,19 @@ async function roswell() {
         return Uap.innerHTML = "HTTP error";
 
     } else {
+
         console.log(flyingSaucer)
-        return Uap.innerHTML =
-            flyingSaucer["Origin"] + " " + flyingSaucer["X-Cloud-Trace-Context"] + " " + flyingSaucer["Accept"] + " " + flyingSaucer["traceparent"] + " " + flyingSaucer["User-Agent"];
-    }
+         const httpUnwrap =
+            flyingSaucer["Origin"] + " " + flyingSaucer["X-Cloud-Trace-Context"]
+            + " " + flyingSaucer["Accept"] + " " + flyingSaucer["traceparent"]
+            + " " + flyingSaucer["User-Agent"];
+
+
+        //const httpList = roswell();
+        for (const n of roswell) {
+            const httpwrap = httpUnwrap.innerHTML += <div class="title"></div>;
+            return httpwrap;
+        }
 
 }
 
@@ -69,7 +78,7 @@ async function reverseEngineer() {
     if (bobLazar.ok === false) {
         console.log("cosmic signals undetected!")
         console.log(bobLazar)
-        //element115.innerHTML = EtTech[error_info] + " " + EtTech[error_info] + " " + EtTech["object_or_array] + " " + EtTech["validate"]
+        //element115.innerHTML = EtTech[error_info] + " " + EtTech[error_info] + " " + EtTech["object_or_array] + " " + EtTech["validate"];
         return element115.innerHTML = "Validation error";
 
     } else {
