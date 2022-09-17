@@ -31,14 +31,13 @@ async function timeTravel() {
         return Interdimensional.innerHTML = "Time data not currently online.";
 
     } else {
-        console.log(SpaceWarp)
-        //Convert to local time
+
         return Interdimensional.innerHTML = SpaceWarp["time"] + " " + SpaceWarp["date"];
     }
 
 }
 
-
+/*
 async function roswell() {
 
     const area51 = await fetch("http://headers.jsontest.com/");
@@ -67,6 +66,8 @@ async function roswell() {
 
 }
 
+
+ */
 
 async function reverseEngineer() {
 
