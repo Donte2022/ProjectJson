@@ -61,13 +61,15 @@ async function roswell() {
 
 async function reverseEngineer() {
 
-    const bobLazar = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
+    const userIDText = document.getElementById("TxtChk");
+    const bobLazar = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate1${userIDText}`]");
     const EtTech = await bobLazar.json();
     const element115 = document.getElementById("TxtChkoutput");
 
     if (bobLazar.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(bobLazar["value"])
+        console.log(bobLazar)
+        //element115.innerHTML = EtTech[error_info] + " " + EtTech[error_info] + " " + EtTech["object_or_array] + " " + EtTech["validate"]
         return element115.innerHTML = "Validation error";
 
     } else {
@@ -80,18 +82,19 @@ async function reverseEngineer() {
 
 async function mD5data() {
 
-    const mD5sent = await fetch("http://md5.jsontest.com/?text=[text to MD5]");
+    const userMd5Text = document.getElementById("MD5txt");
+    const mD5sent = await fetch("http://md5.jsontest.com/?text=[text to MD5]`${userMd5Text.value}`");
     const md5return = await mD5sent.json();
-    const md5userInput = document.getElementById("md5Output");
+    const md5messages = document.getElementById("md5Output");
 
     if (mD5sent.ok === false) {
         console.log("MD5 is offline!")
-        console.log(mD5sent.value)
-        return md5userInput.innerHTML = "MD5 data error";
+        console.log(md5return)
+        return md5messages.innerHTML = "MD5 data error";
 
     } else {
         console.log(md5return)
-        return md5userInput.innerHTML = md5return.original + " " + md5return.md5;
+        return md5messages.innerHTML = md5return["original"] + " " + md5return["md5"];
     }
 
 }
