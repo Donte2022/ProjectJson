@@ -56,28 +56,26 @@ async function roswell() {
 
 }
 
-/*
 
-async function ETcallHome() {
+async function reverseEngineer() {
 
-    const SetiSignal = await fetch("http://ip.jsontest.com/");
-    const WoWsignal = await SetiSignal.json();
-    const Ufo = document.getElementById("IpMan");
-    const Uap = document.getElementById("HpHitters");
-    const Interdimensional = document.getElementById("hardtime");
+    const bobLazar = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
+    const EtTech = await bobLazar.json();
+    const Ufo = document.getElementById("TxtChk");
 
-    if (SetiSignal.ok === false) {
+    if (bobLazar.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(SetiSignal.value)
+        console.log(bobLazar.value)
         return null;
 
     } else {
-        console.log(WoWsignal.ip)
-        return Ufo.innerHTML = WoWsignal.ip;
+        console.log(EtTech)
+        return Ufo.innerHTML = EtTech;
     }
 
 }
 
+/*
 async function ETcallHome() {
 
     const SetiSignal = await fetch("http://ip.jsontest.com/");
