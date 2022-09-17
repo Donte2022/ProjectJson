@@ -62,7 +62,7 @@ async function reverseEngineer() {
 
     const bobLazar = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
     const EtTech = await bobLazar.json();
-    const Ufo = document.getElementById("TxtChk");
+    const element115 = document.getElementById("TxtChkoutput");
 
     if (bobLazar.ok === false) {
         console.log("cosmic signals undetected!")
@@ -71,30 +71,27 @@ async function reverseEngineer() {
 
     } else {
         console.log(EtTech)
-        return Ufo.innerHTML = EtTech;
+        return element115.innerHTML = EtTech;
     }
 
 }
 
-/*
-async function ETcallHome() {
 
-    const SetiSignal = await fetch("http://ip.jsontest.com/");
-    const WoWsignal = await SetiSignal.json();
-    const Ufo = document.getElementById("IpMan");
-    const Uap = document.getElementById("HpHitters");
-    const Interdimensional = document.getElementById("hardtime");
+async function mD5data() {
 
-    if (SetiSignal.ok === false) {
-        console.log("cosmic signals undetected!")
-        console.log(SetiSignal.value)
+    const mD5sent = await fetch("http://md5.jsontest.com/?text=[text to MD5]");
+    const md5return = await mD5sent.json();
+    const md5userInput = document.getElementById("md5Output");
+
+    if (mD5sent.ok === false) {
+        console.log("MD5 is offline!")
+        console.log(mD5sent.value)
         return null;
 
     } else {
-        console.log(WoWsignal.ip)
-        return Ufo.innerHTML = WoWsignal.ip;
+        console.log(md5return)
+        return md5userInput.innerHTML = md5return;
     }
 
 }
 
- */
