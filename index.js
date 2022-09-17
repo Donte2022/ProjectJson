@@ -18,6 +18,7 @@ async function ETcallHome() {
 
 }
 
+
 async function timeTravel() {
 
     const foresight = await fetch("http://date.jsontest.com");
