@@ -9,7 +9,7 @@ async function ETcallHome() {
     if (SetiSignal.ok === false) {
         console.log("cosmic signals undetected!")
         console.log(SetiSignal.value)
-        return null;
+        return Ufo.innerHTML = "Ip address error.";
 
     } else {
         console.log(WoWsignal.ip)
@@ -28,12 +28,12 @@ async function timeTravel() {
     if (foresight.ok === false) {
         console.log("cosmic signals undetected!")
         console.log(foresight.value)
-        return null;
+        return Interdimensional.innerHTML = "Time data not currently online.";
 
     } else {
         console.log(SpaceWarp)
         //Convert to local time
-        return Interdimensional.innerHTML = SpaceWarp.time + " " +SpaceWarp.date;
+        return Interdimensional.innerHTML = SpaceWarp.time + " " + SpaceWarp.date;
     }
 
 }
@@ -48,11 +48,11 @@ async function roswell() {
     if (area51.ok === false) {
         console.log("No UFO just balloon debris!")
         console.log(area51.value)
-        return null;
+        return Uap.innerHTML = "HTTP error";
 
     } else {
         console.log(flyingSaucer)
-        return Uap.innerHTML = flyingSaucer;
+        return Uap.innerHTML = flyingSaucer.Origin;
     }
 
 }
@@ -67,7 +67,7 @@ async function reverseEngineer() {
     if (bobLazar.ok === false) {
         console.log("cosmic signals undetected!")
         console.log(bobLazar.value)
-        return null;
+        return element115.innerHTML = "Validation error";
 
     } else {
         console.log(EtTech)
@@ -86,11 +86,11 @@ async function mD5data() {
     if (mD5sent.ok === false) {
         console.log("MD5 is offline!")
         console.log(mD5sent.value)
-        return null;
+        return md5userInput.innerHTML = "MD5 data error";
 
     } else {
         console.log(md5return)
-        return md5userInput.innerHTML = md5return;
+        return md5userInput.innerHTML = md5return.original + " " + md5return.md5;
     }
 
 }
