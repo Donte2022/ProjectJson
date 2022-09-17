@@ -10,7 +10,7 @@ async function ETphoneHome() {
     const WoWsignal = await SetiSignal.json();
     console.log(WoWsignal)
     //const ETprobe = await SetiSignal();
-    console.log(GetAhSignal);
+    //console.log(GetAhSignal);
     // Alien ignored your call
     if (SetiSignal.ok === false) {
         console.log("cosmic signals undetected!")
