@@ -37,26 +37,26 @@ async function timeTravel() {
 
 }
 
-/*
-async function ETcallHome() {
 
-    const SetiSignal = await fetch("http://ip.jsontest.com/");
-    const WoWsignal = await SetiSignal.json();
-    const Ufo = document.getElementById("IpMan");
+async function roswell() {
+
+    const area51 = await fetch("http://headers.jsontest.com/");
+    const flyingSaucer = await area51.json();
     const Uap = document.getElementById("HpHitters");
-    const Interdimensional = document.getElementById("hardtime");
 
-    if (SetiSignal.ok === false) {
-        console.log("cosmic signals undetected!")
-        console.log(SetiSignal.value)
+    if (area51.ok === false) {
+        console.log("No UFO just balloon debris!")
+        console.log(area51.value)
         return null;
 
     } else {
-        console.log(WoWsignal.ip)
-        return Ufo.innerHTML = WoWsignal.ip;
+        console.log(flyingSaucer)
+        return Uap.innerHTML = flyingSaucer;
     }
 
 }
+
+/*
 
 async function ETcallHome() {
 
