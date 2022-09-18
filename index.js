@@ -42,7 +42,11 @@ async function getHTTP() {
 
     const httpOut = await fetch("http://headers.jsontest.com/");
     const httprReply = await httpOut.json();
-    const httpMessages = document.getElementById("httpDisplay");
+    const httpMessages = document.getElementById("Origin");
+    const httpMessages2 = document.getElementById("X-Cloud-Trace-Context");
+    const httpMessages3 = document.getElementById("Accept");
+    const httpMessages4 = document.getElementById("traceparent");
+    const httpMessages5 = document.getElementById("User-Agent");
 
     if (httpOut.ok === false) {
         console.log("No UFO just balloon debris!")
@@ -50,11 +54,13 @@ async function getHTTP() {
         return httpMessages.innerHTML = "HTTP error";
 
     } else {
-
         console.log(httprReply)
-        return httpMessages.innerHTML = httprReply["Origin"] + " " + httprReply["X-Cloud-Trace-Context"]
-           + " " + httprReply["Accept"] + " " + httprReply["traceparent"]
-           + " " + httprReply["User-Agent"];
+
+        httpMessages.innerHTML = httprReply["Origin"]
+        httpMessages2.innerHTML = httprReply["X-Cloud-Trace-Context"]
+        httpMessages3.innerHTML = httprReply["Accept"]
+        httpMessages4.innerHTML = httprReply["traceparent"]
+        return httpMessages5.innerHTML = httprReply["User-Agent"];
         }
 
 }
@@ -64,11 +70,11 @@ async function valUser() {
     const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
     console.log(valPending)
     const dataRep = await valPending.json();
-    const userDataDisplay = document.getElementById("TxtChkoutput");
-    const userDataDisplay2 = document.getElementById("TxtChkoutput2");
-    const userDataDisplay3 = document.getElementById("TxtChkoutput3");
-    const userDataDisplay4 = document.getElementById("TxtChkoutput4");
-    const userDataDisplay5 = document.getElementById("TxtChkoutput5");
+    const userDataDisplay = document.getElementById("TxtChkOutput");
+    const userDataDisplay2 = document.getElementById("TxtChkOutput2");
+    const userDataDisplay3 = document.getElementById("TxtChkOutput3");
+    const userDataDisplay4 = document.getElementById("TxtChkOutput4");
+    const userDataDisplay5 = document.getElementById("TxtChkOutput5");
     //const userIDText = document.getElementById("TxtChk");
     //console.log(userIDText)
 
@@ -80,7 +86,6 @@ async function valUser() {
 
     } else {
         console.log(dataRep)
-        //console.log(userDataDisplay)
                userDataDisplay.innerHTML = dataRep["size"]
                userDataDisplay2.innerHTML = dataRep["parse_time_nanoseconds"]
                userDataDisplay3.innerHTML = dataRep["object_or_array"]

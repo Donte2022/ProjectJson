@@ -7,47 +7,66 @@
     <title>Title</title>
 </head>
 <body>
-
+<br>
+<!--Time and Date Field-->
 <div class="DataField">
-    The current Date and time is:
-    <button onclick="clock()">Date and Time</button>
-    <p id="clockOutput">time goes here</p>
+    <button onclick="clock()">Click for Time</button>
+    <label for="clockOutput">Time and Date</label>
+    <p id="clockOutput"></p>
 </div>
-
+<br>
+<!--IP Address Field-->
 <div class="DataField">
-    Your current IP address is:
     <button onclick="compAddress()">Click for IP</button>
+    <label for="timeKeeper">Your IP Address is:</label>
     <p id="timeKeeper"></p>
 </div>
-
+<br>
+<!--HTTP Header Field-->
 <div class="DataField">
     HTTP Header:
     <button onclick="getHTTP()">Click!</button>
-    <p id="httpDisplay">Http goes here somewhere</p>
+    <label for="httpDisplay"></label>
+    <p id="httpDisplay"></p>
+    <div>
+        <label for="Origin">Origin:</label>
+        <p id="Origin"></p>
+        <label for="X-Cloud-Trace-Context">X-Cloud-Trace-Context:</label>
+        <p id="X-Cloud-Trace-Context"></p>
+        <label for="Accept">Accept:</label>
+        <p id="Accept"></p>
+        <label for="Traceparent">Traceparent:</label>
+        <p id="traceparent"></p>
+        <label for="User-Agent">User-Agent:</label>
+        <p id="User-Agent"></p>
+
+    </div>
 </div>
 <br>
+<!--Validation Field-->
 <div class="DataField">
     <label for="TxtChk">TxtChk</label><br>
     <input id="TxtChk" type="text">
-    <button onclick="valUser()">Submit</button><br>
+    <button onclick="valUser()">Click to Validate</button><br>
         <div>
-            <label for="TxtChkoutput">Size:</label><br>
-            <p id="TxtChkoutput"></p>
-            <label for="TxtChkoutput2">Parse_time_nanoseconds:</label><br>
-            <p id="TxtChkoutput2"></p>
-            <label for="TxtChkoutput3">Object_of_array:</label><br>
-            <p id="TxtChkoutput3"></p>
-            <label for="TxtChkoutput4">Validate:</label><br>
-            <p id="TxtChkoutput4"></p>
-            <label for="TxtChkoutput5">Empty:</label><br>
-            <p id="TxtChkoutput5"></p>
+            <label for="TxtChkOutput">Size:</label><br>
+            <p id="TxtChkOutput"></p>
+            <label for="TxtChkOutput2">Parse_time_nanoseconds:</label><br>
+            <p id="TxtChkOutput2"></p>
+            <label for="TxtChkOutput3">Object_of_array:</label><br>
+            <p id="TxtChkOutput3"></p>
+            <label for="TxtChkOutput4">Validate:</label><br>
+            <p id="TxtChkOutput4"></p>
+            <label for="TxtChkOutput5">Empty:</label><br>
+            <p id="TxtChkOutput5"></p>
         </div>
 </div>
 <br>
+<!--MD5 field-->
 <div class="DataField">
     <label for="MD5txtInput">MD5Txt</label><br>
     <input id="MD5txtInput">
-    <button onclick="userInfo()">Submit</button><br>
+    <button onclick="userInfo()">Click for MD5</button><br>
         <div>
             <label for="Md5Output">Original:</label><br>
             <p id="Md5Output"></p>
