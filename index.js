@@ -85,7 +85,6 @@ async function valUser() {
 
 
     if (valPending.ok === false) {
-        console.log("cosmic signals undetected!")
         console.log(valPending)
                 //Error Messages Output locations
                userDataError.innerHTML = dataRep["error_info"]
