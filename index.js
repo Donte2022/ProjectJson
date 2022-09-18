@@ -4,7 +4,7 @@ async function compAddress() {
 
     const ipOutbound = await fetch("http://ip.jsontest.com/");
     const ipPend = await ipOutbound.json();
-    const userIpDisplay = document.getElementById("IpMan");
+    const userIpDisplay = document.getElementById("timeKeeper");
 
     if (ipOutbound.ok === false) {
         console.log("cosmic signals undetected!")
@@ -19,20 +19,20 @@ async function compAddress() {
 }
 
 
-async function timeTravel() {
+async function clock() {
 
-    const foresight = await fetch("http://date.jsontest.com");
-    const SpaceWarp = await foresight.json();
-    const Interdimensional = document.getElementById("hardtime");
+    const askfortime = await fetch("http://date.jsontest.com");
+    const timeHack = await askfortime.json();
+    const clockDisplay = document.getElementById("clockOutput");
 
-    if (foresight.ok === false) {
+    if (askfortime.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(foresight["value"])
-        return Interdimensional.innerHTML = "Time data not currently online.";
+        console.log(askfortime["value"])
+        return clockDisplay.innerHTML = "Time data not currently online.";
 
     } else {
 
-        return Interdimensional.innerHTML = SpaceWarp["time"] + " " + SpaceWarp["date"];
+        return clockDisplay.innerHTML = timeHack["time"] + " " + timeHack["date"];
     }
 
 }
