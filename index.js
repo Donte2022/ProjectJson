@@ -85,11 +85,14 @@ async function valUser() {
 
 async function userInfo() {
 
-    const mD5sent = await fetch("http://md5.jsontest.com/?text=");
+    const userMd5Text = document.getElementById("MD5txt");
+    console.log(userMd5Text)
+    const mD5sent = await fetch(`http://md5.jsontest.com/?text=${userMd5Text.value}`);
+
     const md5return = await mD5sent.json();
-    //const userMd5Text = document.getElementById("MD5txt");
-    //console.log(userMd5Text)
     const md5messages = document.getElementById("Md5Output");
+    const md5messages2 = document.getElementById("Md5Output2");
+
 
     if (mD5sent.ok === false) {
         console.log("MD5 is offline!")
@@ -98,7 +101,9 @@ async function userInfo() {
 
     } else {
         console.log(md5return)
-        return md5messages.innerHTML = md5return["original"] + " " + md5return["md5"];
+        md5messages.innerHTML = md5return["original"];
+        return md5messages2.innerHTML = md5return["md5"];
+
     }
 }
 
