@@ -51,6 +51,10 @@ async function roswell() {
 
     } else {
 
+        return Uap.innerHTML = flyingSaucer.value
+
+
+
         console.log(flyingSaucer)
          const httpUnwrap =
             flyingSaucer["Origin"] + " " + flyingSaucer["X-Cloud-Trace-Context"]
@@ -58,42 +62,44 @@ async function roswell() {
             + " " + flyingSaucer["User-Agent"];
 
 
+
         //const httpList = roswell();
         for (const n of roswell) {
             const httpwrap = httpUnwrap.innerHTML += <div class="title"></div>;
+
             return httpwrap;
+
         }
 
 }
-
-
- */
-
-async function reverseEngineer() {
+*/
+async function valUser() {
 
     const userIDText = document.getElementById("TxtChk");
-    const bobLazar = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate1${userIDText}`]");
-    const EtTech = await bobLazar.json();
-    const element115 = document.getElementById("TxtChkoutput");
+    console.log(userIDText)
+    const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate1${userIDText}`]");
+    const dataRep = await valPending.json();
+    const userDataDisplay = document.getElementById("TxtChkoutput");
 
-    if (bobLazar.ok === false) {
+    if (valPending.ok === false) {
         console.log("cosmic signals undetected!")
-        console.log(bobLazar)
+        console.log(valPending)
         //element115.innerHTML = EtTech[error_info] + " " + EtTech[error_info] + " " + EtTech["object_or_array] + " " + EtTech["validate"];
-        return element115.innerHTML = "Validation error";
+        return userDataDisplay.innerHTML = "Validation error";
 
     } else {
         console.log(EtTech)
-        return element115.innerHTML = EtTech["size"] + " " + EtTech["parse_time_nanoseconds"] + " " + EtTech["object_or_array"] + " " + EtTech["validate"] + " " + EtTech["empty"];
+        return userDataDisplay.innerHTML = dataRep["size"] + " " + dataRep["parse_time_nanoseconds"] + " " + dataRep["object_or_array"] + " " + dataRep["validate"] + " " + dataRep["empty"];
     }
 
 }
 
 
-async function mD5data() {
+async function userInfo() {
 
     const userMd5Text = document.getElementById("MD5txt");
-    const mD5sent = await fetch("http://md5.jsontest.com/?text=[text to MD5]`${userMd5Text.value}`");
+    console.log(userMd5Text)
+    const mD5sent = await fetch("http://md5.jsontest.com/?text=[text to MD5]");
     const md5return = await mD5sent.json();
     const md5messages = document.getElementById("md5Output");
 
@@ -106,6 +112,5 @@ async function mD5data() {
         console.log(md5return)
         return md5messages.innerHTML = md5return["original"] + " " + md5return["md5"];
     }
-
 }
 
