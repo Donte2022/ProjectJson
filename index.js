@@ -75,20 +75,22 @@ async function roswell() {
 */
 async function valUser() {
 
-    const userIDText = document.getElementById("TxtChk");
-    console.log(userIDText)
-    const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate1${userIDText}`]");
+    const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
+    console.log(valPending)
     const dataRep = await valPending.json();
     const userDataDisplay = document.getElementById("TxtChkoutput");
+    const userIDText = document.getElementById("TxtChk");
+    //console.log(userIDText)
 
     if (valPending.ok === false) {
         console.log("cosmic signals undetected!")
         console.log(valPending)
         //element115.innerHTML = EtTech[error_info] + " " + EtTech[error_info] + " " + EtTech["object_or_array] + " " + EtTech["validate"];
-        return userDataDisplay.innerHTML = "Validation error";
+        return userDataDisplay.innerHTML = dataRep["error-info"] + " " + dataRep["error"] + " " + dataRep["object_or_array"] + " " + dataRep["validate"];
 
     } else {
-        console.log(EtTech)
+        console.log(dataRep)
+        //console.log(userDataDisplay)
         return userDataDisplay.innerHTML = dataRep["size"] + " " + dataRep["parse_time_nanoseconds"] + " " + dataRep["object_or_array"] + " " + dataRep["validate"] + " " + dataRep["empty"];
     }
 
