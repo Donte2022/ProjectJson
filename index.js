@@ -7,7 +7,6 @@ async function compAddress() {
     const userIpDisplay = document.getElementById("timeKeeper");
 
     if (ipOutbound.ok === false) {
-        console.log(ipOutbound["value"])
         return userIpDisplay.innerHTML = "Ip address error.";
 
     } else {
@@ -17,7 +16,8 @@ async function compAddress() {
     }
 }
 
-//setInterval (compAddress, 1000);
+//Refresh IP every second
+setInterval (compAddress, 1000);
 
 
 async function clock() {
@@ -27,7 +27,6 @@ async function clock() {
     const clockDisplay = document.getElementById("clockOutput");
 
     if (askfortime.ok === false) {
-        //console.log(askfortime["value"])
         return clockDisplay.innerHTML = "Time data not currently online.";
 
     } else {
@@ -38,9 +37,8 @@ async function clock() {
 
 }
 
-
-//setInterval( clockDisplay.innerHTML = ActiveClock, 1000);
-//let ActiveClock = timeHack["time"] + " " + timeHack["date"];
+//Refresh Time and Date every second
+setInterval( clock, 1000);
 
 
 async function getHTTP() {
