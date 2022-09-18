@@ -85,7 +85,7 @@ async function valUser() {
 
 
     if (valPending.ok === false) {
-        console.log(valPending)
+                console.log(valPending)
                 //Error Messages Output locations
                userDataError.innerHTML = dataRep["error_info"]
                userDataError2.innerHTML = dataRep["error_info"]
@@ -93,7 +93,7 @@ async function valUser() {
         return userDataError4.innerHTML = dataRep["validate"];
 
     } else {
-        console.log(dataRep)
+                console.log(dataRep)
                userDataDisplay.innerHTML = dataRep["size"]
                userDataDisplay2.innerHTML = dataRep["parse_time_nanoseconds"]
                userDataDisplay3.innerHTML = dataRep["object_or_array"]
