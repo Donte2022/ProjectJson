@@ -7,16 +7,17 @@ async function compAddress() {
     const userIpDisplay = document.getElementById("timeKeeper");
 
     if (ipOutbound.ok === false) {
-        console.log("cosmic signals undetected!")
         console.log(ipOutbound["value"])
         return userIpDisplay.innerHTML = "Ip address error.";
 
     } else {
-        console.log(ipPend.ip)
-        return userIpDisplay.innerHTML = ipPend["ip"];
-    }
 
+        return userIpDisplay.innerHTML = ipPend["ip"];
+
+    }
 }
+
+//setInterval (compAddress, 1000);
 
 
 async function clock() {
@@ -26,16 +27,20 @@ async function clock() {
     const clockDisplay = document.getElementById("clockOutput");
 
     if (askfortime.ok === false) {
-        console.log("cosmic signals undetected!")
-        console.log(askfortime["value"])
+        //console.log(askfortime["value"])
         return clockDisplay.innerHTML = "Time data not currently online.";
 
     } else {
 
         return clockDisplay.innerHTML = timeHack["time"] + " " + timeHack["date"];
+
     }
 
 }
+
+
+//setInterval( clockDisplay.innerHTML = ActiveClock, 1000);
+//let ActiveClock = timeHack["time"] + " " + timeHack["date"];
 
 
 async function getHTTP() {
