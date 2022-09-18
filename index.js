@@ -25,6 +25,10 @@ async function clock() {
     const askfortime = await fetch("http://date.jsontest.com");
     const timeHack = await askfortime.json();
     const clockDisplay = document.getElementById("clockOutput");
+    const localTime = new Date().getTime()
+    console.log(localTime)
+    console.log(typeof localTime)
+    console.log(timeHack)
 
     if (askfortime.ok === false) {
         return clockDisplay.innerHTML = "Time data not currently online.";
@@ -37,8 +41,17 @@ async function clock() {
 
 }
 
-//Function to Refresh Time and Date every second
+//Function to Refresh UTC Time and Date every second
 setInterval( clock, 1000);
+
+
+function displayDate() {
+        document.getElementById("localTimeOutput").innerHTML = Date();
+}
+
+//Function to Refresh Local Time and Date every second
+setInterval( displayDate, 1000);
+
 
 //Function to get user HTTP info
 async function getHTTP() {
