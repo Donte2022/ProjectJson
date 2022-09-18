@@ -94,21 +94,24 @@ async function userInfo() {
     const md5messages2 = document.getElementById("Md5Output2");
 
 
+    //MD5 reject error message
     if (mD5sent.ok === false) {
         console.log(md5return.value)
         md5messages.innerHTML = "Original data error";
         return md5messages2.innerHTML = "MD5 data error";
+    //Empty MD5 error messages
     } else if (md5return["original"] === "") {
         return md5messages.innerHTML = "Field return empty";
     } else if (md5return["md5"] === "") {
         console.log(md5return["md5"])
         return md5messages2.innerHTML = "MD5 Field return empty";
+    //MD5 Data fields
     } else {
-        console.log(md5return.value)
-        //Clear Error Fields
-        md5messages.innerHTML = md5return[""];
-        // md5messages2.innerHTML = md5return[""];
-        md5messages.innerHTML = md5return["original"];
+        console.log(md5return["md5"].value)
+             //Clear Error Fields
+             //md5messages.innerHTML = md5return[""];
+            // md5messages2.innerHTML = md5return[""];
+               md5messages.innerHTML = md5return["original"];
         return md5messages2.innerHTML = md5return["md5"];
     }
 }
