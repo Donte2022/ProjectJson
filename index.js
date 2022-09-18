@@ -65,8 +65,8 @@ async function valUser() {
     console.log(valPending)
     const dataRep = await valPending.json();
     const userDataDisplay = document.getElementById("TxtChkoutput");
-    const userIDText = document.getElementById("TxtChk");
-    console.log(userIDText)
+    //const userIDText = document.getElementById("TxtChk");
+    //console.log(userIDText)
 
     if (valPending.ok === false) {
         console.log("cosmic signals undetected!")
@@ -85,11 +85,11 @@ async function valUser() {
 
 async function userInfo() {
 
-    const userMd5Text = document.getElementById("MD5txt");
-    console.log(userMd5Text)
     const mD5sent = await fetch("http://md5.jsontest.com/?text=");
     const md5return = await mD5sent.json();
-    const md5messages = document.getElementById("md5Output");
+    //const userMd5Text = document.getElementById("MD5txt");
+    //console.log(userMd5Text)
+    const md5messages = document.getElementById("Md5Output");
 
     if (mD5sent.ok === false) {
         console.log("MD5 is offline!")
