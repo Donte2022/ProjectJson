@@ -19,7 +19,7 @@ async function compAddress() {
 //Refresh IP every second
 setInterval (compAddress, 1000);
 
-
+//Function for Time and Data data
 async function clock() {
 
     const askfortime = await fetch("http://date.jsontest.com");
@@ -37,10 +37,10 @@ async function clock() {
 
 }
 
-//Refresh Time and Date every second
+//Function to Refresh Time and Date every second
 setInterval( clock, 1000);
 
-
+//Function to get user HTTP info
 async function getHTTP() {
 
     const httpOut = await fetch("http://headers.jsontest.com/");
@@ -64,6 +64,11 @@ async function getHTTP() {
 
 }
 
+//Refresh User HTTP data every second
+setInterval(getHTTP, 1000)
+
+
+//Function for user input validation
 async function valUser() {
 
     const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
@@ -81,7 +86,6 @@ async function valUser() {
     const userDataError4 = document.getElementById("error4_info");
 
     if (valPending.ok === false) {
-                console.log(valPending)
                 //Error Messages Output locations
                userDataError.innerHTML = dataRep["error_info"]
                userDataError2.innerHTML = dataRep["error_info"]
@@ -89,7 +93,7 @@ async function valUser() {
         return userDataError4.innerHTML = dataRep["validate"];
 
     } else {
-                console.log(dataRep)
+               //Returned Validation Information
                userDataDisplay.innerHTML = dataRep["size"]
                userDataDisplay2.innerHTML = dataRep["parse_time_nanoseconds"]
                userDataDisplay3.innerHTML = dataRep["object_or_array"]
@@ -98,7 +102,7 @@ async function valUser() {
     }
 }
 
-
+//Function for MD5 information
 async function userInfo() {
 
     const userMd5Text = document.getElementById("MD5txtInput");
