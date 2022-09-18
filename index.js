@@ -51,7 +51,7 @@ async function getHTTP() {
     if (httpOut.ok === false) {
         console.log("No UFO just balloon debris!")
         console.log(httpOut["value"])
-        return httpMessages.innerHTML = "HTTP error";
+        return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";
 
     } else {
         console.log(httprReply)
@@ -70,19 +70,28 @@ async function valUser() {
     const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
     console.log(valPending)
     const dataRep = await valPending.json();
+    //Validation Information Fields
     const userDataDisplay = document.getElementById("TxtChkOutput");
     const userDataDisplay2 = document.getElementById("TxtChkOutput2");
     const userDataDisplay3 = document.getElementById("TxtChkOutput3");
     const userDataDisplay4 = document.getElementById("TxtChkOutput4");
     const userDataDisplay5 = document.getElementById("TxtChkOutput5");
-    //const userIDText = document.getElementById("TxtChk");
-    //console.log(userIDText)
+    //Error Messages
+    const userDataError = document.getElementById("error_info");
+    const userDataError2 = document.getElementById("error2_info");
+    const userDataError3 = document.getElementById("error3_info");
+    const userDataError4 = document.getElementById("error4_info");
+
+
 
     if (valPending.ok === false) {
         console.log("cosmic signals undetected!")
         console.log(valPending)
-        //element115.innerHTML = EtTech[error_info] + " " + EtTech[error_info] + " " + EtTech["object_or_array] + " " + EtTech["validate"];
-        return userDataDisplay.innerHTML = dataRep["error-info"] + " " + dataRep["error"] + " " + dataRep["object_or_array"] + " " + dataRep["validate"];
+                //Error Messages Output locations
+               userDataError.innerHTML = dataRep["error_info"]
+               userDataError2.innerHTML = dataRep["error_info"]
+               userDataError3.innerHTML = dataRep["object_or_array"]
+        return userDataError4.innerHTML = dataRep["validate"];
 
     } else {
         console.log(dataRep)
