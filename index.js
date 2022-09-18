@@ -37,42 +37,28 @@ async function clock() {
 
 }
 
-/*
-async function roswell() {
 
-    const area51 = await fetch("http://headers.jsontest.com/");
-    const flyingSaucer = await area51.json();
-    const Uap = document.getElementById("HpHitters");
+async function getHTTP() {
 
-    if (area51.ok === false) {
+    const httpOut = await fetch("http://headers.jsontest.com/");
+    const httprReply = await httpOut.json();
+    const httpMessages = document.getElementById("httpDisplay");
+
+    if (httpOut.ok === false) {
         console.log("No UFO just balloon debris!")
-        console.log(area51["value"])
-        return Uap.innerHTML = "HTTP error";
+        console.log(httpOut["value"])
+        return httpMessages.innerHTML = "HTTP error";
 
     } else {
 
-        return Uap.innerHTML = flyingSaucer.value
-
-
-
-        console.log(flyingSaucer)
-         const httpUnwrap =
-            flyingSaucer["Origin"] + " " + flyingSaucer["X-Cloud-Trace-Context"]
-            + " " + flyingSaucer["Accept"] + " " + flyingSaucer["traceparent"]
-            + " " + flyingSaucer["User-Agent"];
-
-
-
-        //const httpList = roswell();
-        for (const n of roswell) {
-            const httpwrap = httpUnwrap.innerHTML += <div class="title"></div>;
-
-            return httpwrap;
-
+        console.log(httprReply)
+        return httpMessages.innerHTML = httprReply["Origin"] + " " + httprReply["X-Cloud-Trace-Context"]
+           + " " + httprReply["Accept"] + " " + httprReply["traceparent"]
+           + " " + httprReply["User-Agent"];
         }
 
 }
-*/
+
 async function valUser() {
 
     const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
@@ -80,7 +66,7 @@ async function valUser() {
     const dataRep = await valPending.json();
     const userDataDisplay = document.getElementById("TxtChkoutput");
     const userIDText = document.getElementById("TxtChk");
-    //console.log(userIDText)
+    console.log(userIDText)
 
     if (valPending.ok === false) {
         console.log("cosmic signals undetected!")
