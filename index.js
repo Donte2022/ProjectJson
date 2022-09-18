@@ -65,6 +65,10 @@ async function valUser() {
     console.log(valPending)
     const dataRep = await valPending.json();
     const userDataDisplay = document.getElementById("TxtChkoutput");
+    const userDataDisplay2 = document.getElementById("TxtChkoutput2");
+    const userDataDisplay3 = document.getElementById("TxtChkoutput3");
+    const userDataDisplay4 = document.getElementById("TxtChkoutput4");
+    const userDataDisplay5 = document.getElementById("TxtChkoutput5");
     //const userIDText = document.getElementById("TxtChk");
     //console.log(userIDText)
 
@@ -77,15 +81,19 @@ async function valUser() {
     } else {
         console.log(dataRep)
         //console.log(userDataDisplay)
-        return userDataDisplay.innerHTML = dataRep["size"] + " " + dataRep["parse_time_nanoseconds"] + " " + dataRep["object_or_array"] + " " + dataRep["validate"] + " " + dataRep["empty"];
-    }
 
+               userDataDisplay.innerHTML = dataRep["size"]
+               userDataDisplay2.innerHTML = dataRep["parse_time_nanoseconds"]
+               userDataDisplay3.innerHTML = dataRep["object_or_array"]
+               userDataDisplay4.innerHTML = dataRep["validate"]
+        return userDataDisplay5.innerHTML = dataRep["empty"];
+    }
 }
 
 
 async function userInfo() {
 
-    const userMd5Text = document.getElementById("MD5txt");
+    const userMd5Text = document.getElementById("MD5txtInput");
     const mD5sent = await fetch(`http://md5.jsontest.com/?text=${userMd5Text.value}`);
     const md5return = await mD5sent.json();
     const md5messages = document.getElementById("Md5Output");

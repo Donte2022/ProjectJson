@@ -8,40 +8,52 @@
 </head>
 <body>
 
-<div>
+<div class="DataField">
     The current Date and time is:
     <button onclick="clock()">Date and Time</button>
     <p id="clockOutput">time goes here</p>
 </div>
 
-<div>
+<div class="DataField">
     Your current IP address is:
     <button onclick="compAddress()">Click for IP</button>
     <p id="timeKeeper"></p>
 </div>
 
-<div>
+<div class="DataField">
     HTTP Header:
     <button onclick="getHTTP()">Click!</button>
     <p id="httpDisplay">Http goes here somewhere</p>
 </div>
-
-<div>
+<br>
+<div class="DataField">
     <label for="TxtChk">TxtChk</label><br>
     <input id="TxtChk" type="text">
-    <button onclick="valUser()">Submit</button>
-    <p id="TxtChkoutput"></p>
+    <button onclick="valUser()">Submit</button><br>
+        <div>
+            <label for="TxtChkoutput">Size:</label><br>
+            <p id="TxtChkoutput"></p>
+            <label for="TxtChkoutput2">Parse_time_nanoseconds:</label><br>
+            <p id="TxtChkoutput2"></p>
+            <label for="TxtChkoutput3">Object_of_array:</label><br>
+            <p id="TxtChkoutput3"></p>
+            <label for="TxtChkoutput4">Validate:</label><br>
+            <p id="TxtChkoutput4"></p>
+            <label for="TxtChkoutput5">Empty:</label><br>
+            <p id="TxtChkoutput5"></p>
+        </div>
 </div>
-
-<div>
-    <label for="MD5txt">MD5Txt</label><br>
-    <input id="MD5txt">
+<br>
+<div class="DataField">
+    <label for="MD5txtInput">MD5Txt</label><br>
+    <input id="MD5txtInput">
     <button onclick="userInfo()">Submit</button><br>
-    <label for="Md5Output">Original:</label><br>
-    <p id="Md5Output"></p>
-    <label for="Md5Output2">MD5:</label><br>
-    <p id="Md5Output2"></p>
-
+        <div>
+            <label for="Md5Output">Original:</label><br>
+            <p id="Md5Output"></p>
+            <label for="Md5Output2">MD5:</label><br>
+            <p id="Md5Output2"></p>
+        </div>
 </div>
 
 
