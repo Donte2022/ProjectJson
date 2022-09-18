@@ -95,15 +95,24 @@ async function userInfo() {
 
 
     if (mD5sent.ok === false) {
-        console.log("MD5 is offline!")
-        console.log(md5return)
-        return md5messages.innerHTML = "MD5 data error";
-
+        console.log(md5return.value)
+        md5messages.innerHTML = "Original data error";
+        return md5messages2.innerHTML = "MD5 data error";
+    } else if (md5return["original"] === "") {
+        return md5messages.innerHTML = "Field return empty";
+    } else if (md5return["md5"] === "") {
+        console.log(md5return["md5"])
+        return md5messages2.innerHTML = "MD5 Field return empty";
     } else {
-        console.log(md5return)
+        console.log(md5return.value)
+        //Clear Error Fields
+        md5messages.innerHTML = md5return[""];
+        // md5messages2.innerHTML = md5return[""];
         md5messages.innerHTML = md5return["original"];
         return md5messages2.innerHTML = md5return["md5"];
-
     }
 }
+
+
+
 
