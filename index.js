@@ -87,7 +87,7 @@ async function userInfo() {
 
     const userMd5Text = document.getElementById("MD5txt");
     console.log(userMd5Text)
-    const mD5sent = await fetch("http://md5.jsontest.com/?text=[text to MD5]");
+    const mD5sent = await fetch("http://md5.jsontest.com/?text=");
     const md5return = await mD5sent.json();
     const md5messages = document.getElementById("md5Output");
 
