@@ -52,13 +52,9 @@ async function getHTTP() {
     const httpMessages5 = document.getElementById("User-Agent");
 
     if (httpOut.ok === false) {
-        console.log("No UFO just balloon debris!")
-        console.log(httpOut["value"])
         return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";
 
     } else {
-        console.log(httprReply)
-
         httpMessages.innerHTML = httprReply["Origin"]
         httpMessages2.innerHTML = httprReply["X-Cloud-Trace-Context"]
         httpMessages3.innerHTML = httprReply["Accept"]
@@ -71,7 +67,6 @@ async function getHTTP() {
 async function valUser() {
 
     const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
-    console.log(valPending)
     const dataRep = await valPending.json();
     //Validation Information Fields
     const userDataDisplay = document.getElementById("TxtChkOutput");
@@ -84,8 +79,6 @@ async function valUser() {
     const userDataError2 = document.getElementById("error2_info");
     const userDataError3 = document.getElementById("error3_info");
     const userDataError4 = document.getElementById("error4_info");
-
-
 
     if (valPending.ok === false) {
                 console.log(valPending)
@@ -113,7 +106,6 @@ async function userInfo() {
     const md5return = await mD5sent.json();
     const md5messages = document.getElementById("Md5Output");
     const md5messages2 = document.getElementById("Md5Output2");
-
 
         //MD5 reject error message
     if (mD5sent.ok === false) {
