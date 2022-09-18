@@ -81,7 +81,6 @@ async function valUser() {
     } else {
         console.log(dataRep)
         //console.log(userDataDisplay)
-
                userDataDisplay.innerHTML = dataRep["size"]
                userDataDisplay2.innerHTML = dataRep["parse_time_nanoseconds"]
                userDataDisplay3.innerHTML = dataRep["object_or_array"]
