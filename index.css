@@ -35,6 +35,41 @@ div {
         border-radius: 8px;
 
     }
+
+    .title {
+        text-shadow: 2px 2px orange;
+
+    }
+
+
+#TxtChk {
+    border-radius: 5px;
+    border: 8px blue;
+    padding: 5px;
+    width: 175px;
+}
+
+#MD5txtInput {
+    border-radius: 5px;
+    border: 8px blue;
+    padding: 5px;
+    width: 160px;
+}
+
+/*
+    .input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+*/
     .button:hover {
         background-color: orange;
         padding: 5px 5px;

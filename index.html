@@ -11,7 +11,9 @@
 <!--Time and Date Field-->
 <div class="flexbox-container">
 <div class="flexbox-item flexbox-item-1">
+    <div class="title title">
     <label for="clockOutput">UTC Time and Date:</label>
+        </div>
     <p id="clockOutput"></p>
     <div>
         <label for="localTimeOutput">Local Time and Date:</label>
@@ -21,15 +23,20 @@
 <br>
 <!--IP Address Field-->
 <div class="flexbox-item flexbox-item-2">
-    <label for="timeKeeper">Your current IP Address is:</label>
+    <div class="title title">
+    <label for="timeKeeper">Your current IP address is:</label>
+        </div>
     <p id="timeKeeper"></p>
+    </div>
 </div>
 <br>
 <!--HTTP Header Field-->
 <div class="flexbox-item flexbox-item-3">
-    HTTP Header:
+    <div class="title title">
+    HTTP Headers:
     <label for="httpDisplay"></label>
     <p id="httpDisplay"></p>
+    </div>
     <!--HTTP Information Field-->
     <div>
         <label for="Origin">Origin:</label>
@@ -48,8 +55,12 @@
 <br>
 <!--Validation Field-->
 <div class="flexbox-item flexbox-item-4">
-    <label for="TxtChk">TxtChk</label><br>
+    <div class="title title">
+    <label for="TxtChk">Validation Check</label><br>
+        </div>
+    <div class="input-1">
     <input id="TxtChk" type="text" placeholder="Type text to validate">
+        </div>
     <button class="button button" onclick="valUser()">Click to Validate</button><br>
         <div>
             <label for="TxtChkOutput">Size:</label><br>
@@ -79,8 +90,12 @@
 <br>
 <!--MD5 field-->
 <div class="flexbox-item flexbox-item-5">
+    <div class="title title">
     <label for="MD5txtInput">MD5Txt</label><br>
+    </div>
+    <div class="input-2">
     <input id="MD5txtInput" placeholder=" Type MD5 text here">
+    </div>
     <button class="button button" onclick="userInfo()">Click for MD5</button><br>
         <div>
             <label for="Md5Output">Original:</label><br>
