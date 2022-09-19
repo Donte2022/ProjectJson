@@ -25,10 +25,8 @@ async function clock() {
     const askfortime = await fetch("http://date.jsontest.com");
     const timeHack = await askfortime.json();
     const clockDisplay = document.getElementById("clockOutput");
-    const localTime = new Date().getTime()
-    console.log(localTime)
-    console.log(typeof localTime)
-    console.log(timeHack)
+    //const localTime = new Date().getTime()
+
 
     if (askfortime.ok === false) {
         return clockDisplay.innerHTML = "Time data not currently online.";
@@ -68,6 +66,13 @@ async function getHTTP() {
         return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";
 
     } else {
+        //loop Exp
+
+        //for(let key in httprReply)
+            //console.log(httprReply.value)
+        //Loop Exp End
+        console.log(httprReply)
+        //HTTP Header return fields
         httpMessages.innerHTML = httprReply["Origin"]
         httpMessages2.innerHTML = httprReply["X-Cloud-Trace-Context"]
         httpMessages3.innerHTML = httprReply["Accept"]
