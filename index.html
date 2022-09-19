@@ -9,7 +9,8 @@
 <body>
 <br>
 <!--Time and Date Field-->
-<div class="DataField">
+<div class="flexbox-container">
+<div class="flexbox-item flexbox-item-1">
     <label for="clockOutput">UTC Time and Date:</label>
     <p id="clockOutput"></p>
     <div>
@@ -19,13 +20,13 @@
 </div>
 <br>
 <!--IP Address Field-->
-<div class="DataField">
+<div class="flexbox-item flexbox-item-2">
     <label for="timeKeeper">Your IP Address is:</label>
     <p id="timeKeeper"></p>
 </div>
 <br>
 <!--HTTP Header Field-->
-<div class="DataField">
+<div class="flexbox-item flexbox-item-3">
     HTTP Header:
     <label for="httpDisplay"></label>
     <p id="httpDisplay"></p>
@@ -46,7 +47,7 @@
 </div>
 <br>
 <!--Validation Field-->
-<div class="DataField">
+<div class="flexbox-item flexbox-item-4">
     <label for="TxtChk">TxtChk</label><br>
     <input id="TxtChk" type="text" placeholder="Type text to validate">
     <button onclick="valUser()">Click to Validate</button><br>
@@ -77,7 +78,7 @@
 </div>
 <br>
 <!--MD5 field-->
-<div class="DataField">
+<div class="flexbox-item flexbox-item-5">
     <label for="MD5txtInput">MD5Txt</label><br>
     <input id="MD5txtInput" placeholder=" Type MD5 text here">
     <button onclick="userInfo()">Click for MD5</button><br>
@@ -87,6 +88,7 @@
             <label for="Md5Output2">MD5:</label><br>
             <p id="Md5Output2"></p>
         </div>
+</div>
 </div>
 
 

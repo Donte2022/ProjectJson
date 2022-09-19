@@ -1,5 +1,5 @@
 body {
-    background-color: gold;
+    background-color: orange;
 }
 
 div {
@@ -9,36 +9,41 @@ div {
 .flexbox-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .flexbox-item {
-    width: 200px;
-    margin: 10px;
-    border: 3px solid blue;
-    background-color: orange;
+    margin: 20px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: gold;
+
 }
 .flexbox-item-1 {
-    min-height: 100px;
-    flex-shrink: 2;
+    min-height: 50px;
+    min-width: 110px;
+    flex-shrink: 1;
 }
 
 .flexbox-item-2 {
     min-height: 50px;
+    width: 290px;
     flex-shrink: 1;
 }
 
 .flexbox-item-3 {
     min-height: 500px;
+    width: 500px;
     flex-shrink: 1;
 }
 
 .flexbox-item-4 {
     min-height: 300px;
+    width: 190px;
     flex-shrink: 1;
 }
 
 .flexbox-item-5 {
     min-height: 30px;
+    width: 170px;
     flex-shrink: 1;
 }
