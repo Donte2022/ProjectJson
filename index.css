@@ -12,7 +12,7 @@ div {
 }
 
 .flexbox-item {
-    margin: 20px;
+    margin: 5px;
     border: 2px solid blue;
     border-radius: 10px;
     background-color: gold;
@@ -31,13 +31,13 @@ div {
 }
 
 .flexbox-item-3 {
-    min-height: 500px;
+    min-height: 300px;
     width: 500px;
     flex-shrink: 1;
 }
 
 .flexbox-item-4 {
-    min-height: 300px;
+    min-height: 330px;
     width: 190px;
     flex-shrink: 1;
 }
