@@ -15,6 +15,7 @@ div {
     margin: 5px;
     border: 2px solid blue;
     border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: gold;
 
 }
@@ -22,28 +23,33 @@ div {
     min-height: 50px;
     min-width: 110px;
     flex-shrink: 1;
+    text-align: left;
 }
 
 .flexbox-item-2 {
     min-height: 50px;
     width: 290px;
     flex-shrink: 1;
+    text-align: left;
 }
 
 .flexbox-item-3 {
     min-height: 300px;
     width: 500px;
     flex-shrink: 1;
+    text-align: left;
 }
 
 .flexbox-item-4 {
     min-height: 330px;
     width: 190px;
     flex-shrink: 1;
+    text-align: left;
 }
 
 .flexbox-item-5 {
     min-height: 30px;
     width: 170px;
     flex-shrink: 1;
+    text-align: left;
 }
