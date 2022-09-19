@@ -59,8 +59,13 @@ async function getHTTP() {
     const httpMessages = document.getElementById("Origin");
     const httpMessages2 = document.getElementById("X-Cloud-Trace-Context");
     const httpMessages3 = document.getElementById("Accept");
+    const httpMessages6 = document.getElementById("Upgrade-Insecure-Requests");
     const httpMessages4 = document.getElementById("traceparent");
     const httpMessages5 = document.getElementById("User-Agent");
+    const httpMessages7 = document.getElementById("Referer");
+    const httpMessages8 = document.getElementById("Sec-GPC");
+    const httpMessages9 = document.getElementById("Host");
+    const httpMessages10 = document.getElementById("Accept-Language");
 
     if (httpOut.ok === false) {
         return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";
@@ -76,8 +81,20 @@ async function getHTTP() {
         httpMessages.innerHTML = httprReply["Origin"]
         httpMessages2.innerHTML = httprReply["X-Cloud-Trace-Context"]
         httpMessages3.innerHTML = httprReply["Accept"]
+        httpMessages6.innerHTML = httprReply["Upgrade-Insecure-Requests"]
+        //console.log(httprReply["Upgrade-Insecure-Requests"])
         httpMessages4.innerHTML = httprReply["traceparent"]
-        return httpMessages5.innerHTML = httprReply["User-Agent"];
+        //console.log(httprReply["traceparent"])
+        httpMessages5.innerHTML = httprReply["User-Agent"]
+        //console.log(httprReply["User-Agent"])
+        httpMessages7.innerHTML = httprReply["Referer"]
+        //console.log(httprReply["Referer"])
+        httpMessages8.innerHTML = httprReply["Sec-GPC"]
+        //console.log(httprReply["Sec-GPC"])
+        httpMessages9.innerHTML = httprReply["Host"]
+        //console.log(httprReply["Host"])
+        //console.log(httprReply["Accept-Language"])
+        return httpMessages10.innerHTML = httprReply["Accept-Language"];
         }
 
 }
