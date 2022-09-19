@@ -9,47 +9,72 @@ div {
 .flexbox-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 .flexbox-item {
-    margin: 5px;
+
+    margin: 1px;
     border: 2px solid blue;
     border-radius: 10px;
+    outline-color: blue;
+    outline-width: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: gold;
-
+    text-align: justify;
+    flex-shrink: 1;
+    padding: 10px;
 }
+
+    .button {
+        background-color: #de8c11;
+        color: blue;
+        padding: 5px 5px;
+        border-radius: 8px;
+
+    }
+    .button:hover {
+        background-color: orange;
+        padding: 5px 5px;
+        border-radius: 8px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+
 .flexbox-item-1 {
     min-height: 50px;
     min-width: 110px;
-    flex-shrink: 1;
-    text-align: left;
+    text-align: justify;
+
 }
 
 .flexbox-item-2 {
     min-height: 50px;
     width: 290px;
-    flex-shrink: 1;
-    text-align: left;
+    text-align: justify;
+
 }
 
 .flexbox-item-3 {
-    min-height: 300px;
+    min-height: 250px;
     width: 500px;
-    flex-shrink: 1;
-    text-align: left;
+    text-align: justify;
+
 }
 
 .flexbox-item-4 {
     min-height: 330px;
     width: 190px;
-    flex-shrink: 1;
-    text-align: left;
+    text-align: justify;
+
 }
 
 .flexbox-item-5 {
     min-height: 30px;
     width: 170px;
-    flex-shrink: 1;
-    text-align: left;
+    text-align: justify;
+
 }
