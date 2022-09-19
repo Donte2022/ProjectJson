@@ -5,3 +5,40 @@ body {
 div {
     color: blue;
 }
+
+.flexbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid blue;
+    background-color: orange;
+}
+.flexbox-item-1 {
+    min-height: 100px;
+    flex-shrink: 2;
+}
+
+.flexbox-item-2 {
+    min-height: 50px;
+    flex-shrink: 1;
+}
+
+.flexbox-item-3 {
+    min-height: 500px;
+    flex-shrink: 1;
+}
+
+.flexbox-item-4 {
+    min-height: 300px;
+    flex-shrink: 1;
+}
+
+.flexbox-item-5 {
+    min-height: 30px;
+    flex-shrink: 1;
+}
