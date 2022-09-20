@@ -1,5 +1,5 @@
 
-
+//Request IP address
 async function compAddress() {
 
     const ipOutbound = await fetch("http://ip.jsontest.com/");
@@ -18,6 +18,26 @@ async function compAddress() {
 
 //Refresh IP every second
 setInterval (compAddress, 1000);
+
+async function timeTravel() {
+
+    const ReqForTime = await fetch("http://date.jsontest.com");
+    const TimePend = await ReqForTime.json();
+    const TimeData = document.getElementById("gtmOnline");
+    const timeError = document.getElementById("gtmError");
+
+
+    if (ReqForTime.ok === false) {
+        return timeError.innerHTML = "Error, time is offline.";
+
+
+    } else {
+        return TimeData.innerHTML = TimePend.time + " " + TimePend.date;
+    }
+}
+//Refresh GTM time every second
+setInterval(timeTravel, 1000);
+
 
 //Function for Current Time
 function displayDate() {
