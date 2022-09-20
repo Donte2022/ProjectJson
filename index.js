@@ -68,19 +68,20 @@ async function valUser() {
     const userDataError = document.getElementById("error_info");
 
 
-    if (valPending["validate"] === false) {
+    if (dataRep["validate"] === false) {
 
                 //Error Messages Output locations
-                let errorMessage = Object.entries(valPending);
-
+                let errorMessage = Object.entries(dataRep);
+                //Clear Successful Validation Messages
+                userDataDisplay.innerHTML = "";
                 return userDataError.innerHTML = errorMessage;
 
     } else {
 
                 //Validation Data Reply
                 let NewDataRep = Object.entries(dataRep);
-                    userDataDisplay.innerHTML = "";
-                    userDataError.innerHTML = "";
+                //Clear Error Messages
+                userDataError.innerHTML = "";
                 return userDataDisplay.innerHTML = NewDataRep;
     }
 }
