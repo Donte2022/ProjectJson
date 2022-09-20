@@ -60,7 +60,7 @@ setInterval(getHTTP, 1000)
 //Function for user input validation
 async function valUser() {
 
-    const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
+    const valPending = await fetch(`http://validate.jsontest.com/?json=${TxtChk.value}`);
     const dataRep = await valPending.json();
     //Validation Information Fields
     const userDataDisplay = document.getElementById("NewDataRep");
@@ -68,7 +68,7 @@ async function valUser() {
     const userDataError = document.getElementById("error_info");
 
 
-    if (valPending.ok === false) {
+    if (valPending["validate"] === false) {
 
                 //Error Messages Output locations
                 let errorMessage = Object.entries(valPending);
@@ -79,6 +79,8 @@ async function valUser() {
 
                 //Validation Data Reply
                 let NewDataRep = Object.entries(dataRep);
+                    userDataDisplay.innerHTML = "";
+                    userDataError.innerHTML = "";
                 return userDataDisplay.innerHTML = NewDataRep;
     }
 }
