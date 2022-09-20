@@ -61,8 +61,6 @@ async function getHTTP() {
 
     } else {
 
-        for(let key in httprReply)
-        // key=Title HttpReply=obj data
         {
             let httpData = Object.entries(httprReply);
             return httpMessages10.innerHTML += httpData;
@@ -82,31 +80,23 @@ async function valUser() {
     const valPending = await fetch("http://validate.jsontest.com/?json=[JSON-code-to-validate]");
     const dataRep = await valPending.json();
     //Validation Information Fields
-    const userDataDisplay = document.getElementById("TxtChkOutput");
-    const userDataDisplay2 = document.getElementById("TxtChkOutput2");
-    const userDataDisplay3 = document.getElementById("TxtChkOutput3");
-    const userDataDisplay4 = document.getElementById("TxtChkOutput4");
-    const userDataDisplay5 = document.getElementById("TxtChkOutput5");
+    const userDataDisplay = document.getElementById("NewDataRep");
     //Error Messages
     const userDataError = document.getElementById("error_info");
-    const userDataError2 = document.getElementById("error2_info");
-    const userDataError3 = document.getElementById("error3_info");
-    const userDataError4 = document.getElementById("error4_info");
+
 
     if (valPending.ok === false) {
+
                 //Error Messages Output locations
-               userDataError.innerHTML = dataRep["error_info"]
-               userDataError2.innerHTML = dataRep["error_info"]
-               userDataError3.innerHTML = dataRep["object_or_array"]
-        return userDataError4.innerHTML = dataRep["validate"];
+                let errorMessage = Object.entries(valPending);
+
+                return userDataError.innerHTML = errorMessage;
 
     } else {
-               //Returned Validation Information
-               userDataDisplay.innerHTML = dataRep["size"]
-               userDataDisplay2.innerHTML = dataRep["parse_time_nanoseconds"]
-               userDataDisplay3.innerHTML = dataRep["object_or_array"]
-               userDataDisplay4.innerHTML = dataRep["validate"]
-        return userDataDisplay5.innerHTML = dataRep["empty"];
+
+                //Validation Data Reply
+                let NewDataRep = Object.entries(dataRep);
+                return userDataDisplay.innerHTML = NewDataRep;
     }
 }
 
@@ -119,20 +109,25 @@ async function userInfo() {
     const md5messages = document.getElementById("Md5Output");
     const md5messages2 = document.getElementById("Md5Output2");
 
-        //MD5 reject error message
+                //MD5 reject error message
     if (mD5sent.ok === false) {
-               md5messages.innerHTML = "We could not locate the original resource you requested";
-        return md5messages2.innerHTML = "We could not locate the md5 resource you requested";
+               md5messages2.innerHTML = "We could not locate the original resource you requested";
 
-        //Empty original error message
+                //Empty original error message
     } else if (md5return["original"] === "") {
-               md5messages.innerHTML = "Field return empty";
-        return md5messages2.innerHTML = md5return["md5"];
 
-        //MD5 Data fields
+                   //Clear prior successful return message
+                   md5messages.innerHTML = "";
+            return md5messages2.innerHTML = "Add values in MD5 Field";
+
+                 //MD5 Data fields
     } else {
-               md5messages.innerHTML = md5return["original"];
-        return md5messages2.innerHTML = md5return["md5"];
+
+                let Md5data = Object.entries(md5return);
+                console.log(Md5data)
+               //Clear Prior Error Message
+               md5messages2.innerHTML = "";
+        return md5messages.innerHTML = Md5data;
     }
 }
 

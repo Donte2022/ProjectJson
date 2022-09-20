@@ -16,12 +16,12 @@
                 <div class="title title">
                 <label for="clockOutput">UTC Time and Date:</label>
                 </div>
-                    <p id="clockOutput"></p>
+                    <p id="clockOutput" style="color:green;"></p>
                     <div>
                         <div class="title title">
                         <label for="localTimeOutput">Local Time and Date:</label>
                         </div>
-                            <p id="localTimeOutput"></p>
+                            <p id="localTimeOutput" style="color:green;"></p>
 
                     </div>
         </div>
@@ -31,7 +31,7 @@
     <div class="title title">
     <label for="timeKeeper">Your current IP address is:</label>
         </div>
-    <p id="timeKeeper"></p>
+    <p id="timeKeeper" style="color:green;"></p>
     </div>
 </div>
 <br>
@@ -46,8 +46,9 @@
     <div>
         <button class="button button" onclick="getHTTP()">Click for HTTP</button>
         <br>
+        <br>
         <label for="httpReply">HTTP Reply:</label>
-        <p id="httpReply"></p>
+        <p id="httpReply" style="color:green;"></p>
     </div>
     <br>
 </div>
@@ -62,29 +63,16 @@
         </div>
     <button class="button button" onclick="valUser()">Click to Validate</button><br>
         <div>
-            <label for="TxtChkOutput">Size:</label><br>
-            <p id="TxtChkOutput"></p>
-            <label for="TxtChkOutput2">Parse_time_nanoseconds:</label><br>
-            <p id="TxtChkOutput2"></p>
-            <label for="TxtChkOutput3">Object_of_array:</label><br>
-            <p id="TxtChkOutput3"></p>
-            <label for="TxtChkOutput4">Validate:</label><br>
-            <p id="TxtChkOutput4"></p>
-            <label for="TxtChkOutput5">Empty:</label><br>
-            <p id="TxtChkOutput5"></p>
+            <br>
+            <label for="NewDataRep">NewDataRep</label><br>
+            <p id="NewDataRep" style="color:green;"></p>
         </div>
         <br>
-                <!--Error Messages-->
-                <div>
-                    <label for="Error_info">Error_Info:</label>
-                        <p id="error_info"></p>
-                        <label for="Error2_info">Error2_Info:</label>
-                        <p id="error2_info"></p>
-                        <label for="Error3_info">Object_or_array:</label>
-                        <p id="error3_info"></p>
-                        <label for="Error4_info">Validate:</label>
-                        <p id="error4_info"></p>
-                </div>
+                    <!--Validation Error Messages-->
+            <div>
+                <label for="Error_info"></label>
+                <p id="error_info" style="color:red;"></p>
+            </div>
 </div>
 <br>
 <!--MD5 field-->
@@ -92,16 +80,16 @@
     <div class="title title">
     <label for="MD5txtInput">MD5Txt</label><br>
     </div>
-    <div class="input-2">
-    <input id="MD5txtInput" placeholder=" Type MD5 text here">
-    </div>
-    <button class="button button" onclick="userInfo()">Click for MD5</button><br>
-        <div>
-            <label for="Md5Output">Original:</label><br>
-            <p id="Md5Output"></p>
-            <label for="Md5Output2">MD5:</label><br>
-            <p id="Md5Output2"></p>
-        </div>
+                <div class="input-2">
+                <input id="MD5txtInput" placeholder=" Type MD5 text here">
+                </div>
+                            <button class="button button" onclick="userInfo()">Click for MD5</button><br>
+                                <br>
+                        <div>
+                        <label for="Md5Output">MD5 Output:</label><br>
+                        <p id="Md5Output" style="color:green;"></p>
+                        <p id="Md5Output2" style="color:red;"></p>
+                    </div>
 </div>
 
 

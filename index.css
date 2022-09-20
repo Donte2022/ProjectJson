@@ -77,21 +77,21 @@ div {
 
 .flexbox-item-3 {
     min-height: 250px;
-    width: 500px;
+    width: 650px;
     text-align: justify;
 
 }
 
 .flexbox-item-4 {
-    min-height: 330px;
-    width: 190px;
+    min-height: 130px;
+    width: 600px;
     text-align: justify;
 
 }
 
 .flexbox-item-5 {
     min-height: 30px;
-    width: 170px;
+    width: 400px;
     text-align: justify;
 
 }
