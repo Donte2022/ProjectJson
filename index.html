@@ -18,8 +18,11 @@
                 </div>
                     <p id="clockOutput"></p>
                     <div>
+                        <div class="title title">
                         <label for="localTimeOutput">Local Time and Date:</label>
-                        <p id="localTimeOutput"></p>
+                        </div>
+                            <p id="localTimeOutput"></p>
+
                     </div>
         </div>
 <br>
@@ -41,26 +44,10 @@
     </div>
     <!--HTTP Information Field-->
     <div>
-        <label for="Origin">Origin:</label>
-        <p id="Origin"></p>
-        <label for="X-Cloud-Trace-Context">X-Cloud-Trace-Context:</label>
-        <p id="X-Cloud-Trace-Context"></p>
-        <label for="Accept">Accept:</label>
-        <p id="Accept"></p>
-        <label for="Upgrade-Insecure-Requests">Upgrade-Insecure-Requests:</label>
-        <p id="Upgrade-Insecure-Requests"></p>
-        <label for="traceparent">Traceparent:</label>
-        <p id="traceparent"></p>
-        <label for="User-Agent">User-Agent:</label>
-        <p id="User-Agent"></p>
-        <label for="Referer">Referer:</label>
-        <p id="Referer"></p>
-        <label for="Sec-GPC">Sec-GPC:</label>
-        <p id="Sec-GPC"></p>
-        <label for="Host">Host:</label>
-        <p id="Host"></p>
-        <label for="Accept-Language">Accept-Language:</label>
-        <p id="Accept-Language"></p>
+        <button class="button button" onclick="getHTTP()">Click for HTTP</button>
+        <br>
+        <label for="httpReply">HTTP Reply:</label>
+        <p id="httpReply"></p>
     </div>
     <br>
 </div>
@@ -71,7 +58,7 @@
     <label for="TxtChk">Validation Check</label><br>
         </div>
     <div class="input-1">
-    <input id="TxtChk" type="text" placeholder="Type text to validate">
+    <input id="TxtChk" type="text" placeholder="Type text to validate here">
         </div>
     <button class="button button" onclick="valUser()">Click to Validate</button><br>
         <div>

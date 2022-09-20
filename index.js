@@ -25,8 +25,6 @@ async function clock() {
     const askfortime = await fetch("http://date.jsontest.com");
     const timeHack = await askfortime.json();
     const clockDisplay = document.getElementById("clockOutput");
-    //const localTime = new Date().getTime()
-
 
     if (askfortime.ok === false) {
         return clockDisplay.innerHTML = "Time data not currently online.";
@@ -42,7 +40,7 @@ async function clock() {
 //Function to Refresh UTC Time and Date every second
 setInterval( clock, 1000);
 
-
+//Function for Current Time
 function displayDate() {
         document.getElementById("localTimeOutput").innerHTML = Date();
 }
@@ -56,51 +54,26 @@ async function getHTTP() {
 
     const httpOut = await fetch("http://headers.jsontest.com/");
     const httprReply = await httpOut.json();
-    const httpMessages = document.getElementById("Origin");
-    const httpMessages2 = document.getElementById("X-Cloud-Trace-Context");
-    const httpMessages3 = document.getElementById("Accept");
-    const httpMessages6 = document.getElementById("Upgrade-Insecure-Requests");
-    const httpMessages4 = document.getElementById("traceparent");
-    const httpMessages5 = document.getElementById("User-Agent");
-    const httpMessages7 = document.getElementById("Referer");
-    const httpMessages8 = document.getElementById("Sec-GPC");
-    const httpMessages9 = document.getElementById("Host");
-    const httpMessages10 = document.getElementById("Accept-Language");
+    const httpMessages10 = document.getElementById("httpReply");
 
     if (httpOut.ok === false) {
         return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";
 
     } else {
-        //loop Exp
 
-        //for(let key in httprReply)
-            //console.log(httprReply.value)
-        //Loop Exp End
-        console.log(httprReply)
-        //HTTP Header return fields
-        httpMessages.innerHTML = httprReply["Origin"]
-        httpMessages2.innerHTML = httprReply["X-Cloud-Trace-Context"]
-        httpMessages3.innerHTML = httprReply["Accept"]
-        httpMessages6.innerHTML = httprReply["Upgrade-Insecure-Requests"]
-        //console.log(httprReply["Upgrade-Insecure-Requests"])
-        httpMessages4.innerHTML = httprReply["traceparent"]
-        //console.log(httprReply["traceparent"])
-        httpMessages5.innerHTML = httprReply["User-Agent"]
-        //console.log(httprReply["User-Agent"])
-        httpMessages7.innerHTML = httprReply["Referer"]
-        //console.log(httprReply["Referer"])
-        httpMessages8.innerHTML = httprReply["Sec-GPC"]
-        //console.log(httprReply["Sec-GPC"])
-        httpMessages9.innerHTML = httprReply["Host"]
-        //console.log(httprReply["Host"])
-        //console.log(httprReply["Accept-Language"])
-        return httpMessages10.innerHTML = httprReply["Accept-Language"];
+        for(let key in httprReply)
+        // key=Title HttpReply=obj data
+        {
+            let httpData = Object.entries(httprReply);
+            return httpMessages10.innerHTML += httpData;
         }
+
+    }
 
 }
 
 //Refresh User HTTP data every second
-setInterval(getHTTP, 1000)
+//setInterval(getHTTP, 1000)
 
 
 //Function for user input validation
