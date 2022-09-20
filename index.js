@@ -55,6 +55,7 @@ async function getHTTP() {
     const httpOut = await fetch("http://headers.jsontest.com/");
     const httprReply = await httpOut.json();
     const httpMessages10 = document.getElementById("httpReply");
+    const httpMessagesError = document.getElementById("httpErrorDisplay")
 
     if (httpOut.ok === false) {
         return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";

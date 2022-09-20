@@ -8,7 +8,6 @@
 </head>
 
 <body>
-</div>
 <br>
 <!--Time and Date Field-->
     <div class="flexbox-container">
@@ -39,9 +38,8 @@
 <div class="flexbox-item flexbox-item-3">
     <div class="title title">
     HTTP Headers:
-    <label for="httpDisplay"></label>
-    <p id="httpDisplay"></p>
     </div>
+    <br>
     <!--HTTP Information Field-->
     <div>
         <button class="button button" onclick="getHTTP()">Click for HTTP</button>
@@ -49,6 +47,8 @@
         <br>
         <label for="httpReply">HTTP Reply:</label>
         <p id="httpReply" style="color:green;"></p>
+        <label for="httpErrorDisplay"></label>
+        <p id="httpErrorDisplay"></p>
     </div>
     <br>
 </div>
@@ -56,7 +56,9 @@
 <!--Validation Field-->
 <div class="flexbox-item flexbox-item-4">
     <div class="title title">
-    <label for="TxtChk">Validation Check</label><br>
+    <label for="TxtChk">Validation Check</label>
+        <br>
+        <br>
         </div>
     <div class="input-1">
     <input id="TxtChk" type="text" placeholder="Type text to validate here">
@@ -64,8 +66,10 @@
     <button class="button button" onclick="valUser()">Click to Validate</button><br>
         <div>
             <br>
-            <label for="NewDataRep">NewDataRep</label><br>
-            <p id="NewDataRep" style="color:green;"></p>
+            <div class="title title">
+            <label for="NewDataRep">NewDataRep:</label><br>
+            </div>
+                <p id="NewDataRep" style="color:green;"></p>
         </div>
         <br>
                     <!--Validation Error Messages-->
@@ -78,7 +82,9 @@
 <!--MD5 field-->
 <div class="flexbox-item flexbox-item-5">
     <div class="title title">
-    <label for="MD5txtInput">MD5Txt</label><br>
+    <label for="MD5txtInput">MD5Txt</label>
+        <br>
+        <br>
     </div>
                 <div class="input-2">
                 <input id="MD5txtInput" placeholder=" Type MD5 text here">
@@ -86,8 +92,10 @@
                             <button class="button button" onclick="userInfo()">Click for MD5</button><br>
                                 <br>
                         <div>
+                            <div class="title title">
                         <label for="Md5Output">MD5 Output:</label><br>
-                        <p id="Md5Output" style="color:green;"></p>
+                        </div>
+                                <p id="Md5Output" style="color:green;"></p>
                         <p id="Md5Output2" style="color:red;"></p>
                     </div>
 </div>
