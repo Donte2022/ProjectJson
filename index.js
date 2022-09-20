@@ -19,27 +19,6 @@ async function compAddress() {
 //Refresh IP every second
 setInterval (compAddress, 1000);
 
-//Function for Time and Data data
-async function clock() {
-
-    const askfortime = await fetch("http://date.jsontest.com");
-    const timeHack = await askfortime.json();
-    const clockDisplay = document.getElementById("clockOutput");
-
-    if (askfortime.ok === false) {
-        return clockDisplay.innerHTML = "Time data not currently online.";
-
-    } else {
-
-        return clockDisplay.innerHTML = timeHack["time"] + " " + timeHack["date"];
-
-    }
-
-}
-
-//Function to Refresh UTC Time and Date every second
-setInterval( clock, 1000);
-
 //Function for Current Time
 function displayDate() {
         document.getElementById("localTimeOutput").innerHTML = Date();

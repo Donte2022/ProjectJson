@@ -34,6 +34,7 @@ div {
 
     .title {
         text-shadow: 2px 2px orange;
+        font-weight: bold;
 
     }
 
@@ -61,12 +62,7 @@ div {
     }
 
 
-.flexbox-item-1 {
-    min-height: 50px;
-    min-width: 110px;
-    text-align: justify;
 
-}
 
 .flexbox-item-2 {
     min-height: 50px;
