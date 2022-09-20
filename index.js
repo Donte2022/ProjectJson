@@ -130,7 +130,6 @@ async function userInfo() {
     } else {
 
                 let Md5data = Object.entries(md5return);
-                console.log(Md5data)
                //Clear Prior Error Message
                md5messages2.innerHTML = "";
         return md5messages.innerHTML = Md5data;
