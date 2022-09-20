@@ -34,15 +34,18 @@ async function getHTTP() {
     const httpOut = await fetch("http://headers.jsontest.com/");
     const httprReply = await httpOut.json();
     const httpMessages10 = document.getElementById("httpReply");
-    const httpMessagesError = document.getElementById("httpErrorDisplay")
+    //const httpMessagesError = document.getElementById("httpErrorDisplay")
 
     if (httpOut.ok === false) {
+        httpMessages.innerHTML = "";
         return httpMessages.innerHTML = "Access to obtain HTTP headers were denied";
 
     } else {
 
         {
             let httpData = Object.entries(httprReply);
+            //Clear data field for loop
+            httpMessages10.innerHTML = "";
             return httpMessages10.innerHTML += httpData;
         }
 
@@ -51,7 +54,7 @@ async function getHTTP() {
 }
 
 //Refresh User HTTP data every second
-//setInterval(getHTTP, 1000)
+setInterval(getHTTP, 1000)
 
 
 //Function for user input validation
