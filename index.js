@@ -5,7 +5,7 @@ async function compAddress() {
     const ipOutbound = await fetch("http://ip.jsontest.com/");
     const ipPend = await ipOutbound.json();
     const userIpDisplay = document.getElementById("timeKeeper");
-
+    //Chk data property for true or false
     if (ipOutbound.ok === false) {
         return userIpDisplay.innerHTML = "Ip address error.";
 
